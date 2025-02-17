@@ -1,7 +1,6 @@
---- FLUENT PLUS SETTINGS ---
+
 local Show_Button = false -- Shows the button for toggle fluent ui manually. If "false", works only on mobile, if "true", works everytime.
 local Button_Icon = "" -- Icon of the button for toggle fluent ui
-----------------------------
 
 local Lighting = game:GetService("Lighting")
 local RunService = game:GetService("RunService")
@@ -37,7 +36,6 @@ local ProtectGui = protectgui or (syn and syn.protect_gui) or function() end
 
 local Themes = {
 	Names = {
-		"Darker", 
 		"AMOLED",
 		"Light",
 		"Balloon",
@@ -54,31 +52,6 @@ local Themes = {
 		"Cloud",
 		"Grape",
 		"Bloody"
-	},
-	Darker = {
-		Name = "Darker",
-		Accent = Color3.fromRGB(56, 109, 223),
-		AcrylicMain = Color3.fromRGB(30, 30, 30),
-		AcrylicBorder = Color3.fromRGB(60, 60, 60),
-		AcrylicGradient = ColorSequence.new(Color3.fromRGB(17, 17, 17), Color3.fromRGB(18, 18, 18)),
-		AcrylicNoise = 0.94,
-		TitleBarLine = Color3.fromRGB(65, 65, 65),
-		Tab = Color3.fromRGB(100, 100, 100),
-		Element = Color3.fromRGB(70, 70, 70),
-		ElementBorder = Color3.fromRGB(25, 25, 25),
-		InElementBorder = Color3.fromRGB(55, 55, 55),
-		ElementTransparency = 0.82,
-		DropdownFrame = Color3.fromRGB(120, 120, 120),
-		DropdownHolder = Color3.fromRGB(35, 35, 35),
-		DropdownBorder = Color3.fromRGB(25, 25, 25),
-		Dialog = Color3.fromRGB(35, 35, 35),
-		DialogHolder = Color3.fromRGB(25, 25, 25),
-		DialogHolderLine = Color3.fromRGB(20, 20, 20),
-		DialogButton = Color3.fromRGB(35, 35, 35),
-		DialogButtonBorder = Color3.fromRGB(55, 55, 55),
-		DialogBorder = Color3.fromRGB(50, 50, 50),
-		DialogInput = Color3.fromRGB(45, 45, 45),
-		DialogInputLine = Color3.fromRGB(120, 120, 120),
 	},
 	AMOLED = {
 		Name = "AMOLED",
@@ -6303,26 +6276,26 @@ else
 end
 
 local MinimizeButton = New("TextButton", {
-    BackgroundTransparency = 1,
-    Size = UDim2.new(0.064, 0),(0.126, 0),
-    BorderSizePixel = 0
+	BackgroundTransparency = 1,
+	Size = UDim2.new(1, 0, 1, 0),
+	BorderSizePixel = 0
 }, {
-    New("UIPadding", {
-        PaddingBottom = UDim.new(0, 2),
-        PaddingLeft = UDim.new(0, 2),
-        PaddingRight = UDim.new(0, 2),
-        PaddingTop = UDim.new(0, 2),
-    }),
-    New("ImageLabel", {
-        Image = "rbxassetid://124410702599662",  -- ใช้ไอคอนใหม่ที่คุณต้องการ
-        Size = UDim2.new(0.064, 0),(0.126, 0),
-        BackgroundTransparency = 1,
-    }, {
-        New("UIAspectRatioConstraint", {
-            AspectRatio = 1,
-            AspectType = Enum.AspectType.FitWithinMaxSize,
-        })
-    })
+	New("UIPadding", {
+		PaddingBottom = UDim.new(0, 2),
+		PaddingLeft = UDim.new(0, 2),
+		PaddingRight = UDim.new(0, 2),
+		PaddingTop = UDim.new(0, 2),
+	}),
+	New("ImageLabel", {
+		Image = Mobile and Button_Icon or "rbxassetid://10734897102" or "",
+		Size = UDim2.new(1, 0, 1, 0),
+		BackgroundTransparency = 1,
+	}, {
+		New("UIAspectRatioConstraint", {
+			AspectRatio = 1,
+			AspectType = Enum.AspectType.FitWithinMaxSize,
+		})
+	})
 })
 
 local Minimizer
