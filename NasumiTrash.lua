@@ -16,6 +16,8 @@ local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 
 local Mobile
+local buttonImage = "rbxassetid://113946403431451"  -- ใส่ ID ของรูปภาพ
+
 if RunService:IsStudio() then
 	Mobile = false
 else
@@ -24,6 +26,15 @@ end
 
 if Show_Button then
 	Mobile = true
+end
+
+-- สร้าง ImageButton เมื่อ Mobile เป็น true
+if Mobile then
+	local button = Instance.new("ImageButton")
+	button.Image = buttonImage
+	button.Size = UDim2.new(0, 100, 0, 100)  -- ขนาดของปุ่ม
+	button.Position = UDim2.new(0.5, -50, 0.5, -50)  -- ตำแหน่งกลางหน้าจอ
+	button.Parent = game.Players.LocalPlayer.PlayerGui:WaitForChild("ScreenGui")  -- เพิ่มปุ่มไปยัง ScreenGui ของผู้เล่น
 end
 
 local Asset = "rbxassetid://"
