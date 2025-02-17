@@ -6303,27 +6303,28 @@ else
 end
 
 local MinimizeButton = New("TextButton", {
-	BackgroundTransparency = 1,
-	Size = UDim2.new(1, 0, 1, 0),
-	BorderSizePixel = 0
+    BackgroundTransparency = 1,
+    Size = UDim2.new(1, 0, 1, 0),
+    BorderSizePixel = 0
 }, {
-	New("UIPadding", {
-		PaddingBottom = UDim.new(0, 2),
-		PaddingLeft = UDim.new(0, 2),
-		PaddingRight = UDim.new(0, 2),
-		PaddingTop = UDim.new(0, 2),
-	}),
-	New("ImageLabel", {
-		Image = Mobile and Button_Icon or "rbxassetid://10734897102" or "",
-		Size = UDim2.new(1, 0, 1, 0),
-		BackgroundTransparency = 1,
-	}, {
-		New("UIAspectRatioConstraint", {
-			AspectRatio = 1,
-			AspectType = Enum.AspectType.FitWithinMaxSize,
-		})
-	})
+    New("UIPadding", {
+        PaddingBottom = UDim.new(0, 2),
+        PaddingLeft = UDim.new(0, 2),
+        PaddingRight = UDim.new(0, 2),
+        PaddingTop = UDim.new(0, 2),
+    }),
+    New("ImageLabel", {
+        Image = "rbxassetid://113946403431451",  -- ใช้ไอคอนใหม่ที่คุณต้องการ
+        Size = UDim2.new(1, 0, 1, 0),
+        BackgroundTransparency = 1,
+    }, {
+        New("UIAspectRatioConstraint", {
+            AspectRatio = 1,
+            AspectType = Enum.AspectType.FitWithinMaxSize,
+        })
+    })
 })
+
 
 local Minimizer
 
