@@ -6304,7 +6304,7 @@ end
 
 local MinimizeButton = New("TextButton", {
     BackgroundTransparency = 1,
-    Size = UDim2.new(1, 0, 1, 0),
+    Size = UDim2.new(0.064, 0),(0.126, 0),
     BorderSizePixel = 0
 }, {
     New("UIPadding", {
@@ -6315,7 +6315,7 @@ local MinimizeButton = New("TextButton", {
     }),
     New("ImageLabel", {
         Image = "rbxassetid://124410702599662",  -- ใช้ไอคอนใหม่ที่คุณต้องการ
-        Size = UDim2.new(1, 0, 1, 0),
+        Size = UDim2.new(0.064, 0),(0.126, 0),
         BackgroundTransparency = 1,
     }, {
         New("UIAspectRatioConstraint", {
@@ -6330,7 +6330,7 @@ local Minimizer
 if Mobile then
 	Minimizer = New("Frame", {
 		Parent = GUI,
-		Size = UDim2.new(1, 0, 1, 0),
+		Size = UDim2.new(0.064, 0),(0.126, 0),
 		Position = UDim2.new(0.45, 0, 0.025, 0),
 		BackgroundTransparency = 1,
 		ZIndex = 999999999,
@@ -6338,7 +6338,7 @@ if Mobile then
 	{
 		New("Frame", {
 			BackgroundColor3 = Color3.fromRGB(0, 0, 0),
-			Size = UDim2.new(1, 0, 1, 0),
+			Size = UDim2.new(0.064, 0),(0.126, 0),
 			BackgroundTransparency = 1,
 			BorderSizePixel = 0
 		}, {
@@ -6351,7 +6351,7 @@ if Mobile then
 else
 	Minimizer = New("Frame", {
 		Parent = GUI,
-		Size = UDim2.new(1, 0, 1, 0),
+		Size = UDim2.new(0.064, 0),(0.126, 0),
 		Position = UDim2.new(0.45, 0, 0.025, 0),
 		BackgroundTransparency = 1,
 		ZIndex = 999999999,
@@ -6359,7 +6359,7 @@ else
 	{
 		New("Frame", {
 			BackgroundColor3 = Color3.fromRGB(0, 0, 0),
-			Size = UDim2.new(1, 0, 1, 0),
+			Size = UDim2.new(0.064, 0),(0.126, 0),
 			BackgroundTransparency = 0,
 			BorderSizePixel = 0
 		}, {
